@@ -45,9 +45,11 @@ In this section, we detail the steps taken to prepare the sales data for analysi
 
 1. Handling Missing Values
 - Upon inspecting the data, missing values were found in the Revenue 
-- To address this, missing Revenue values were calculated where possible by multiplying Quantity by Unit Price.
+- To address this, missing Revenue values were calculated by multiplying Quantity by Unit Price.
 
--
+
+
+
 
 
 
