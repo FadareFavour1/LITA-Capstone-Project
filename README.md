@@ -9,7 +9,7 @@
  
  [Data Cleaning](#Data-Cleaning) 
 
- [Data Analysis](Data-Analysis)
+ [Data Analysis](#Data-Analysis)
 
 ### Project Title
 Sales Data 
