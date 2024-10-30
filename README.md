@@ -1,5 +1,8 @@
 # LITA-Capstone-Project(Sales Data)
 
+### Contents
+
+
 ### Project Title
 Sales Data 
 
@@ -40,12 +43,17 @@ The dataset includes information on historical sales transactions, providing fie
 - What customer demographics contribute most to revenue, and how can we optimize marketing to better engage these customers?
 - Are there any patterns in product performance that can guide inventory or pricing decisions?
 
-#### Data Cleaning
+### Data Cleaning
 In this section, we detail the steps taken to prepare the sales data for analysis. These steps help to ensure the dataset is complete, consistent, and reliable for meaningful insights.
 
-1. Handling Missing Values
+1. Handling Missing Values 
 - Upon inspecting the data, missing values were found in the Revenue 
-- To address this, missing Revenue values were calculated by multiplying Quantity by Unit Price.
+- To address this, missing Revenue values were calculated by multiplying Quantity by Unit Price using the formula
+  
+  ` PRODUCT(F2:G2) `
+
+  
+  
 
 
 
