@@ -1,7 +1,13 @@
 # LITA-Capstone-Project(Sales Data)
 
 ### Contents
-
+ [Project Title](#Project-Title) 
+ 
+ [Introduction](#Introduction) 
+ 
+ [Project Overview](#Project-Overview)
+ 
+ [Data Cleaning](#Data-Cleaning) 
 
 ### Project Title
 Sales Data 
@@ -50,10 +56,26 @@ In this section, we detail the steps taken to prepare the sales data for analysi
 - Upon inspecting the data, missing values were found in the Revenue 
 - To address this, missing Revenue values were calculated by multiplying Quantity by Unit Price using the formula
   
-  ` PRODUCT(F2:G2) `
+  ` =PRODUCT(F2:G2) `
 
-  
-  
+  ### Data Analysis
+In this section, we discuss the analysis performed using Excel and SQL, focusing on how each tool contributed to deriving insights from the sales data.
+
+#### Analysis Performed in Excel
+
+Excel was utilized for its robust data visualization and analytical capabilities. The following analyses were conducted:
+
+- Descriptive Statistics: Using Excel functions such as SUM, AVERAGEIF, and SUMIF, we calculated key metrics including total Sales,Average sales by product  and total revenue by region.
+
+For example,
+- The total Sales was calculated using the formula:
+ ` =SUM(H2:H50001) `
+
+- The average sales for each product was calculated using the formula:
+` =AVERAGEIF(C2:C50001,C2,H2:H50001) `
+
+- The Total revenue for each region was calculated using the formula:
+` =SUMIF(D2:D50001,D2,H2:H50001) `
 
 
 
