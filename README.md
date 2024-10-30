@@ -9,6 +9,8 @@
  
  [Data Cleaning](#Data-Cleaning) 
 
+ [Data Analysis](Data-Analysis)
+
 ### Project Title
 Sales Data 
 
@@ -65,17 +67,28 @@ In this section, we discuss the analysis performed using Excel and SQL, focusing
 
 Excel was utilized for its robust data visualization and analytical capabilities. The following analyses were conducted:
 
-- Descriptive Statistics: Using Excel functions such as SUM, AVERAGEIF, and SUMIF, we calculated key metrics including total Sales,Average sales by product  and total revenue by region.
+##### Descriptive Statistics: 
+ Using Excel functions such as SUM, AVERAGEIF, and SUMIF, we calculated key metrics including total Sales,Average sales by product  and total revenue by region.
 
 For example,
 - The total Sales was calculated using the formula:
+
  ` =SUM(H2:H50001) `
 
 - The average sales for each product was calculated using the formula:
+ 
 ` =AVERAGEIF(C2:C50001,C2,H2:H50001) `
 
 - The Total revenue for each region was calculated using the formula:
+ 
 ` =SUMIF(D2:D50001,D2,H2:H50001) `
+
+##### Pivot Tables: 
+To facilitate a deeper understanding of the sales data, Pivot Tables were employed in Excel. A Pivot Table is a powerful tool that allows users to summarize and analyze large datasets interactively, enabling quick insights into data patterns and trends.
+
+Several Pivot Tables were created to explore different dimensions of the sales data :
+1. Total Sales by Product : A Pivot Table was constructed to summarize total revenue and for each product. The `Product` field was placed in the rows section, while `Revenue` was added to the values area to calculate the sum.
+
 
 
 
