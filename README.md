@@ -60,7 +60,7 @@ In this section, we detail the steps taken to prepare the sales data for analysi
   
   ` =PRODUCT(F2:G2) `
 
-  ### Data Analysis
+### Data Analysis
 In this section, we discuss the analysis performed using Excel and SQL, focusing on how each tool contributed to deriving insights from the sales data.
 
 #### Analysis Performed in Excel
