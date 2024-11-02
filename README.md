@@ -11,7 +11,7 @@
 
  [Data Analysis](#Data-Analysis)
 
- [Data Visualization In Power Bi](#Data-Visualization-In-Power Bi)
+ [Data Visualization In Power Bi](#Data-Visualization-In-Power-Bi)
 
 ### Project Title
 Sales Data 
