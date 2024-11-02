@@ -115,5 +115,27 @@ SQL was employed for more complex queries and data manipulations, leveraging its
   FROM [LITA Capstone SalesData]
   GROUP BY Region
 
+- Highest Selling Product by Total Sales Value: To get the top selling product we use;
 
+  ```sql
+  SELECT Product, Sum(Revenue) AS TotalSalesValue
+  FROM [dbo].[LITA Capstone SalesData]
+  GROUP Product
+  ORDER BY TotalSalesValue desc
 
+- Total Revenue per product:
+
+  ```sql
+  SELECT Product, SUM (Revenue) AS TotalSales
+  FROM [dbo].[LITA Capstone SalesData]
+  GROUP BY Product
+
+- Monthly Sales totals for the current year
+
+  ```sql
+  SELECT Format(OrderDate,'yyyy-mm')as month,
+  SUM(Revenue) AS Monthlysalesdata
+  FROM [LITA Capstone SalesData]
+  WHERE Year(OrderDate)=Year(GETDATE())
+  GROUP BY FORMAT(OrderDate,'yyyy-mm')
+  ORDER BY Month
