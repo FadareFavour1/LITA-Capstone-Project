@@ -101,8 +101,15 @@ Several Pivot Tables were created to explore different dimensions of the sales d
 #### Analysis Performed in SQL
 SQL was employed for more complex queries and data manipulations, leveraging its ability to handle large datasets efficiently. Key analyses performed included:
 
-- 
+- Retrieving the total Sales for each Product Category : To get the total Sales for each Product, we use;
 
+`sql 
+Select Product, Sum (Revenue) as TotalSales
+
+from [dbo].[LITA Capstone SalesData]
+
+Group by Product                    
+`
 
 
 
