@@ -139,3 +139,41 @@ SQL was employed for more complex queries and data manipulations, leveraging its
   WHERE Year(OrderDate)=Year(GETDATE())
   GROUP BY FORMAT(OrderDate,'yyyy-mm')
   ORDER BY Month
+
+- Top 5 Customers by Total Purchase Amount
+
+  ```sql
+  SELECT TOP 5(Customer_Id),
+  SUM(Revenue) AS TotalPurchaseAmount FROM [dbo].[LITA Capstone SalesData]
+  GROUP BY Customer_Id
+  ORDER BY TotalPurchaseAmount desc
+
+- The percentage of total Sales attribute by each region
+
+  ```sql
+  WITH TotalSales AS (
+  SELECT sum(Revenue) as 
+  TotalRevenue
+  FROM [LITA Capstone SalesData]
+  )
+  SELECT
+  Region,
+	 SUM(Revenue) AS 
+  RegionalRevenue,
+  (SUM(Revenue)*100.0/
+  (SELECT TotalRevenue FROM
+  TotalSales)) AS SalesPercentage
+  FROM [LITA Capstone SalesData]
+  GROUP BY Region
+
+- Products with no sales in the last quarter
+
+  ```sql
+  SELECT distinct Product
+  FROM [LITA Capstone SalesData]
+  WHERE Product NOT IN (
+  SELECT Product
+  FROM [LITA Capstone SalesData]
+  WHERE OrderDate >=
+  DATEADD(Month, -3,GETDATE())
+  )
