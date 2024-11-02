@@ -14,7 +14,7 @@
  [Data Visualization In Power BI](#Data-Visualization-In-Power-BI)
 
 ### Project Title
-Sales Data 
+**Sales Data** 
 
 ### Introduction
 #### Project Purpose
@@ -89,35 +89,35 @@ For example,
 To facilitate a deeper understanding of the sales data, Pivot Tables were employed in Excel. A Pivot Table is a powerful tool that allows users to summarize and analyze large datasets interactively, enabling quick insights into data patterns and trends.
 
 Several Pivot Tables were created to explore different dimensions of the sales data :
-1. Total Sales by Product : A Pivot Table was constructed to summarize total revenue and for each product. The `Product` field was placed in the rows section, while `Revenue` was added to the values area to calculate the sum.
+1. **Total Sales by Product** : A Pivot Table was constructed to summarize total revenue and for each product. The `Product` field was placed in the rows section, while `Revenue` was added to the values area to calculate the sum.
 
 ![image](https://github.com/user-attachments/assets/21111202-c216-4b9a-95b5-d47b931771f3)
 
-2. Sales by Region: Another Pivot Table was generated to analyze sales performance across different regions. The `Region` field served as the row label, and total revenue was calculated similarly by placing the `Revenue` field in the values area.
+2. **Sales by Region**: Another Pivot Table was generated to analyze sales performance across different regions. The `Region` field served as the row label, and total revenue was calculated similarly by placing the `Revenue` field in the values area.
    
 ![image](https://github.com/user-attachments/assets/1fad2c13-0b43-4b28-8b4a-d0667912f14c)
 
-3. Monthly Sales Trends: To track sales trends over time, the OrderDate was used to group sales data by month. This allowed us to visualize monthly sales fluctuations effectively
+3. **Monthly Sales Trends**: To track sales trends over time, the OrderDate was used to group sales data by month. This allowed us to visualize monthly sales fluctuations effectively
 ![image](https://github.com/user-attachments/assets/240ef28a-d4a5-47d7-bf77-34f90661bd66)
 
 #### Analysis Performed in SQL
 SQL was employed for more complex queries and data manipulations, leveraging its ability to handle large datasets efficiently. Key analyses performed included:
 
-- Total Sales for each Product Category : To get the total Sales for each Product, we use;
+- **Total Sales for each Product Category** : To get the total Sales for each Product, we use;
 
   ```sql 
   SELECT Product, SUM (Revenue) AS TotalSales
   FROM [dbo].[LITA Capstone SalesData]
   GROUP BY Product                    
 
-- Number of Sales Transaction in each region: To get the number of Sales transaction for all the regions we use;
+- **Number of Sales Transaction in each region**: To get the number of Sales transaction for all the regions we use;
 
   ```sql
   SELECT Region, Count(OrderID) AS Numberofsalestransaction 
   FROM [LITA Capstone SalesData]
   GROUP BY Region
 
-- Highest Selling Product by Total Sales Value: To get the top selling product we use;
+- **Highest Selling Product by Total Sales Value**: To get the top selling product we use;
 
   ```sql
   SELECT Product, Sum(Revenue) AS TotalSalesValue
@@ -125,14 +125,14 @@ SQL was employed for more complex queries and data manipulations, leveraging its
   GROUP Product
   ORDER BY TotalSalesValue desc
 
-- Total Revenue per product:
+- **Total Revenue per product**
 
   ```sql
   SELECT Product, SUM (Revenue) AS TotalSales
   FROM [dbo].[LITA Capstone SalesData]
   GROUP BY Product
 
-- Monthly Sales totals for the current year
+- **Monthly Sales totals for the current year**
 
   ```sql
   SELECT Format(OrderDate,'yyyy-mm')as month,
@@ -142,7 +142,7 @@ SQL was employed for more complex queries and data manipulations, leveraging its
   GROUP BY FORMAT(OrderDate,'yyyy-mm')
   ORDER BY Month
 
-- Top 5 Customers by Total Purchase Amount
+- **Top 5 Customers by Total Purchase Amount**
 
   ```sql
   SELECT TOP 5(Customer_Id),
@@ -150,7 +150,7 @@ SQL was employed for more complex queries and data manipulations, leveraging its
   GROUP BY Customer_Id
   ORDER BY TotalPurchaseAmount desc
 
-- The percentage of total Sales attribute by each region
+- **The percentage of total Sales attribute by each region**
 
   ```sql
   WITH TotalSales AS (
@@ -183,7 +183,7 @@ SQL was employed for more complex queries and data manipulations, leveraging its
 ### Data Visualization In Power BI
   To present the sales data insights in an interactive and visually compelling format, Power BI was chosen for data visualization. Power BI’s visualization capabilities allowed for a clear and intuitive presentation of key metrics, trends, and relationships in the data.
   
-1. Revenue by Product (Bar Chart)
+1. **Revenue by Product** (Bar Chart)
 
 - Visualization Type: Bar Chart
 
@@ -192,7 +192,7 @@ SQL was employed for more complex queries and data manipulations, leveraging its
 - Purpose: The bar chart displayed the total revenue generated by each product, making it easy to compare sales performance.
 - Insights: The visualization revealed that Shoes and Shirts were the top-performing products, while Jacket and Socks had lower sales figures. This insight is valuable for product inventory planning and promotional targeting.
 
-2. Sales by Region (donut Chart)
+2. **Sales by Region** (donut Chart)
 
 - Visualization Type: donut Chart 
 
@@ -201,7 +201,7 @@ SQL was employed for more complex queries and data manipulations, leveraging its
 - Purpose: The donut chart was used to show total revenue by region, providing a view of sales distribution.
 - Insights: This chart highlighted that the South region has the highest revenue. Visualizing data on a donut made it easy to identify which regions contributed the most to sales, helping to tailor regional marketing efforts.
 
-3.  Monthly Sales Trends (Line Chart)
+3. **Monthly Sales Trends** (Line Chart)
 
 - Visualization Type: Line Chart
 
@@ -210,9 +210,12 @@ SQL was employed for more complex queries and data manipulations, leveraging its
 - Purpose: The line chart plotted monthly revenue, helping to visualize sales trends over time.
 - Insights: A clear sales peak was observed in February. Understanding these seasonal trends enables better planning for future sales campaigns.
 
-Total Sales of Product in Each Region(Pie Chart)
+4. **Interactive Filters and Slicers**
 
-- Visualization Type : Pie Chart
+![Screenshot (48)](https://github.com/user-attachments/assets/8c47f86f-7005-4725-b2e5-0439cf84aee6)
 
+- Interactivity: Filters and slicers were added to allow users to explore the data by product, region, and time period.
+- Purpose: This interactivity provided flexibility in data exploration, enabling users to drill down into specific products or regions for a more detailed analysis.
+- Benefit: By applying filters, users could isolate sales for individual regions, such as comparing North vs. South, which offered deeper insights into regional performance.
   
   
