@@ -103,17 +103,17 @@ SQL was employed for more complex queries and data manipulations, leveraging its
 
 - Total Sales for each Product Category : To get the total Sales for each Product, we use;
 
-```sql 
-SELECT Product, SUM (Revenue) AS TotalSales
-FROM [dbo].[LITA Capstone SalesData]
-GROUP BY Product                    
+  ```sql 
+  SELECT Product, SUM (Revenue) AS TotalSales
+  FROM [dbo].[LITA Capstone SalesData]
+  GROUP BY Product                    
 
 - Number of Sales Transaction in each region: To get the number of Sales transaction for all the regions we use;
 
-```sql
-SELECT Region, Count(OrderID) AS Numberofsalestransaction 
-FROM [LITA Capstone SalesData]
-GROUP BY Region
+  ```sql
+  SELECT Region, Count(OrderID) AS Numberofsalestransaction 
+  FROM [LITA Capstone SalesData]
+  GROUP BY Region
 
 
 
