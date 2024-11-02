@@ -89,12 +89,19 @@ To facilitate a deeper understanding of the sales data, Pivot Tables were employ
 Several Pivot Tables were created to explore different dimensions of the sales data :
 1. Total Sales by Product : A Pivot Table was constructed to summarize total revenue and for each product. The `Product` field was placed in the rows section, while `Revenue` was added to the values area to calculate the sum.
 
+![image](https://github.com/user-attachments/assets/21111202-c216-4b9a-95b5-d47b931771f3)
 
+2. Sales by Region: Another Pivot Table was generated to analyze sales performance across different regions. The `Region` field served as the row label, and total revenue was calculated similarly by placing the `Revenue` field in the values area.
+   
+![image](https://github.com/user-attachments/assets/1fad2c13-0b43-4b28-8b4a-d0667912f14c)
 
+3. Monthly Sales Trends: To track sales trends over time, the OrderDate was used to group sales data by month. This allowed us to visualize monthly sales fluctuations effectively
+![image](https://github.com/user-attachments/assets/240ef28a-d4a5-47d7-bf77-34f90661bd66)
 
+#### Analysis Performed in SQL
+SQL was employed for more complex queries and data manipulations, leveraging its ability to handle large datasets efficiently. Key analyses performed included:
 
-
-
+- 
 
 
 
