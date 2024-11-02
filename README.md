@@ -177,3 +177,7 @@ SQL was employed for more complex queries and data manipulations, leveraging its
   WHERE OrderDate >=
   DATEADD(Month, -3,GETDATE())
   )
+
+  ### Data Visualization in Power Bi
+  To present the sales data insights in an interactive and visually compelling format, Power BI was chosen for data visualization. Power BI’s visualization capabilities allowed for a clear and intuitive presentation of key metrics, trends, and relationships in the data.
+  
